@@ -3,61 +3,32 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Monkey’s Jungle Quest v5</title>
-  <link rel="manifest" href="manifest.webmanifest"/>
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.png"/>
+  <title>🍌 Banana Count</title>
+  <link rel="stylesheet" href="../../style.css"/>
   <meta name="theme-color" content="#2e7d32"/>
-  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:12px}
+    .banana{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:16px;text-align:center;cursor:pointer;user-select:none}
+    .banana .emoji{font-size:28px;display:block}
+    .score{margin:10px 0;font-weight:700}
+    .target{padding:10px;background:#fff;border-left:4px solid #2e7d32;border-radius:8px}
+    .back{display:inline-block;margin:6px 0}
+  </style>
 </head>
 <body>
   <div class="container">
     <div class="topbar">
       <div class="brand">
-        <div class="logo wiggle"></div>
-        <div class="title">
-          <div style="font-size:18px;font-weight:800">Monkey’s Jungle Quest <span style="opacity:.5">v5</span></div>
-          <div style="font-size:12px;opacity:.7">Play · Learn · Explore</div>
-        </div>
-      </div>
-      <div>
-        <span class="age-chip">Ages 2–4</span>
-        <span class="age-chip">Ages 4–6</span>
+        <a href="/index.html" class="back">← Back</a>
+        <div class="title" style="margin-left:8px">Banana Count</div>
       </div>
     </div>
-
-    <div class="card hero">
-      <img src="assets/jungle-bg.png" alt="Jungle background" class="float"/>
-      <div class="badge">Main Menu</div>
+    <div class="card">
+      <div class="target">Match the number: <strong id="target"></strong></div>
+      <div class="score">Score: <span id="score">0</span></div>
+      <div id="grid" class="grid"></div>
     </div>
-
-    <div class="notice">Tip on iPhone: open in Safari → Share → <strong>Add to Home Screen</strong> to install.</div>
-
-    <h3>Mini‑Games</h3>
-    <div class="menu">
-      <a class="btn" data-route="/games/banana-count/index.html">
-        🍌 Banana Count / Math
-        <span class="small">Tap bananas to count & match</span>
-      </a>
-      <a class="btn" data-route="/games/memory/index.html">
-        🧠 Memory Match
-        <span class="small">Find animal pairs</span>
-      </a>
-      <a class="btn" data-route="/games/maze/index.html">
-        🌀 Maze (Coming Soon)
-        <span class="small">Guide the monkey home</span>
-      </a>
-      <a class="btn" data-route="/games/puzzle/index.html">
-        🧩 Puzzle (Coming Soon)
-        <span class="small">Assemble the jungle image</span>
-      </a>
-      <a class="btn" data-route="/games/hide-seek/index.html">
-        🙈 Hide & Seek (Coming Soon)
-        <span class="small">Find the hidden animals</span>
-      </a>
-    </div>
-
-    <div class="footer">© 2025 Miss Kelly · Little Explorers · v5 demo</div>
   </div>
-  <script src="app.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
